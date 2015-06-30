@@ -22,12 +22,13 @@ public class Server {
 		PrintWriter pw=new PrintWriter(new BufferedWriter(new OutputStreamWriter(os)),true);
 		BufferedReader br=new BufferedReader(new InputStreamReader(is));
 		
-		
-	    String str =br.readLine();
-	    while(!str.equals("end")){
+	    
+       
+         while(true){
+         String str=br.readLine();
          System.out.println("recieved---"+str);
-         str=br.readLine();
-	}
+         pw.println(str);
+         }
 	}
 }
 }
